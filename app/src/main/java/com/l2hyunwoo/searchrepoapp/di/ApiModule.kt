@@ -13,6 +13,6 @@ import javax.inject.Singleton
 object ApiModule {
     @Provides
     @Singleton
-    fun provideWeatherApi(retrofit: Retrofit): GithubService =
+    fun provideGithubApi(retrofit: Retrofit): GithubService =
         retrofit.create(GithubService::class.java)
 }
