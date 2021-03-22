@@ -18,22 +18,26 @@
 
         <TextView
             android:id="@+id/txt_repo_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
             android:text="@{repo.name}"
             android:textColor="@color/black"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/txt_repo_stars"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="addadadadfqfqf" />
 
         <TextView
             android:id="@+id/txt_repo_description"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="40dp"
             android:text="@{repo.description}"
             android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/txt_repo_stars"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_repo_name"
             tools:text="addadadadfqfqf" />

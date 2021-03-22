@@ -14,5 +14,14 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.lifecycleOwner = this
+        infoViewModel.intiUserData("jakewharton")
+
+        val infoAdapter = InfoAdapter()
+        binding.rvRepoList.adapter = infoAdapter
+
+        with(infoViewModel) {
+            user.observe(this@MainActivity) { infoAdapter.replaceUser(it) }
+            repoList.observe(this@MainActivity) { infoAdapter.replaceList(it) }
+        }
     }
 }
