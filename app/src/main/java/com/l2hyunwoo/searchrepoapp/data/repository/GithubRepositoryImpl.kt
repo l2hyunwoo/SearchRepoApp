@@ -15,7 +15,7 @@ class GithubRepositoryImpl @Inject constructor(
     override suspend fun userRepos(userName: String): List<Repo> =
         withContext(Dispatchers.IO) {
             dataSource.fetchUserRepos(userName)
-                .sortedBy { it.stars }
+                .sortedByDescending { it.stars }
         }
 
 }

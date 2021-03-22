@@ -19,9 +19,6 @@ object RetrofitModule {
         HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 
     private fun provideClient() = OkHttpClient.Builder()
-        .connectTimeout(20, TimeUnit.SECONDS)
-        .writeTimeout(20, TimeUnit.SECONDS)
-        .readTimeout(30, TimeUnit.SECONDS)
         .addInterceptor(provideLoggingInterceptor())
         .build()
 
