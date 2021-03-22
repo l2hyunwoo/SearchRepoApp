@@ -1,7 +1,8 @@
-package com.l2hyunwoo.searchrepoapp
+package com.l2hyunwoo.searchrepoapp.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.l2hyunwoo.searchrepoapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
